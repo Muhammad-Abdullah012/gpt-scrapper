@@ -44,7 +44,7 @@ schema = {
 
 def scrape_with_playwright(urls, schema, api_key):
     print("urls => ", urls, " schema => ", schema, " api_key => ", api_key)
-    llm = ChatOpenAI(temperature=0, model="gpt-4", openai_api_key=api_key)
+    llm = ChatOpenAI(temperature=0, model="gpt-4", api_key=api_key)
 
     def extract(content: str, schema: dict):
         return create_extraction_chain(schema=schema, llm=llm).run(content)

@@ -54,7 +54,7 @@ class ScrapResponse(BaseModel):
 
 
 @app.get("/", response_model=PingResponse)
-def ping():
+def ping_root():
     return {"status": "Ok"}
 
 
